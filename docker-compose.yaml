@@ -34,7 +34,7 @@ services:
     restart: always
     ports: 
       - "6379:6379"
-    
+    #  321321332
   rabbitserver:
     image: "rabbitmq:3-management"
     container_name: rabbitmqserver
