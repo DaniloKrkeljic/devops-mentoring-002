@@ -13,10 +13,10 @@ spec:
     spec:
       containers:
       - name: redis
-        image: devops-mentoring-002_basketapi
+        image: "redis:alpine"
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 6379
