@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitserver
+spec:
+  selector:
+    matchLabels:
+      app: rabbitserver
+  template:
+    metadata:
+      labels:
+        app: rabbitserver
+    spec:
+      containers:
+      - name: rabbitserver
+        image: "rabbitmq:3-management"
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 5672
+        - containerPort: 15672
